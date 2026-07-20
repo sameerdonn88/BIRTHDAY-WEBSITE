@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🎂 Happy Birthday 🎉</title>
+<background:"C:\Users\pc\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\LocalState\sessions\1D6C3E9F28E8592ABF50C0EAFE85554C13DF19C9\transfers\2026-29\WhatsApp Image 2026-07-16 at 7.20.53 PM.jpeg">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<style>
+body{
+margin:0;
+overflow:hidden;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1);
+background-size:400% 400%;
+animation:bg 10s infinite alternate;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+@keyframes bg{
+0%{background-position:left;}
+100%{background-position:right;}
+}
+
+.card{
+text-align:center;
+background:rgba(255,255,255,0.15);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:20px;
+color:white;
+box-shadow:0 0 25px rgba(0,0,0,.3);
+}
+
+h1{
+font-size:50px;
+animation:glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px yellow;}
+to{text-shadow:0 0 25px white;}
+}
+
+button{
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:10px;
+background:#ff4081;
+color:white;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.1);
+}
+
+#surprise{
+display:none;
+margin-top:20px;
+font-size:28px;
+animation:pop 1s infinite alternate;
+}
+
+@keyframes pop{
+from{transform:scale(1);}
+to{transform:scale(1.1);}
+}
+
+.balloon{
+position:absolute;
+bottom:-150px;
+width:50px;
+height:70px;
+border-radius:50%;
+animation:float 10s linear infinite;
+}
+
+.balloon::after{
+content:"";
+position:absolute;
+width:2px;
+height:70px;
+background:white;
+left:50%;
+top:70px;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+100%{transform:translateY(-120vh);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-white/80 backdrop-blur-md shadow-2xl rounded-2xl p-6 sm:p-8 max-w-md w-full text-center">
+<h1>🎉 Happy Birthday to my Sister 🎂</h1>
+Happy Birthday, Sis! 🎉🎂
+
+Wishing you a day filled with love, laughter, and unforgettable memories. Thank you for always being there through every high and low. May this new year of your life bring you happiness, good health, success, and all the dreams you wish for. Keep smiling and shining the way you always do. I’m so lucky to have you as my sister.
+
+Have an amazing birthday! ❤️🎈🎁
+
+<h2>Wishing You Endless Happiness,<br>Success & Joy! ❤️</h2>
+
+<button onclick="showSurprise()">🎁 Open Surprise</button>
+
+<div id="surprise">
+💖 Surprise! 💖<br><br>
+<img src="C:\Users\pc\Downloads\WhatsApp Image 2026-07-19 at 11.00.47 PM.jpeg">
+<img src="C:\Users\pc\Downloads\WhatsApp Image 2026-07-19 at 11.40.53 PM (1).jpeg">
+<img src="C:\Users\pc\Downloads\WhatsApp Image 2026-07-19 at 11.48.59 PM (1).jpeg">
+<img src="C:\Users\pc\Downloads\WhatsApp Image 2026-07-19 at 11.40.53 PM.jpeg"
+ kya dami hai photo😂<br><br>Okay! Once Again Happy Birthday
+🎈 Have an Amazing Day! 🎈
+</div>
+</div>
+
+<script>
+function showSurprise(){
+document.getElementById("surprise").style.display="block";
+
+confetti({
+particleCount:300,
+spread:180,
+origin:{y:0.6}
+});
+
+setInterval(()=>{
+confetti({
+particleCount:10,
+angle:60,
+spread:60,
+origin:{x:0}
+});
+confetti({
+particleCount:10,
+angle:120,
+spread:60,
+origin:{x:1}
+});
+},1500);
+}
+
+const colors=["red","blue","yellow","green","purple","pink","orange"];
+
+for(let i=0;i<25;i++){
+let b=document.createElement("div");
+b.className="balloon";
+b.style.background=colors[Math.floor(Math.random()*colors.length)];
+b.style.left=Math.random()*100+"vw";
+b.style.animationDuration=(6+Math.random()*6)+"s";
+b.style.animationDelay=Math.random()*5+"s";
+document.body.appendChild(b);
+}
+</script>
+
+</body>
+</html>
